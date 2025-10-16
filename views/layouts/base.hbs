@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+
+  <!-- Dark Mode Init -->
+  <script src="/js/theme-init.js"></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script src="/js/tailwind-config.js"></script>
+
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Reveal page after Tailwind loaded -->
+  <script>
+    window.addEventListener("load", () => {
+      document.documentElement.style.visibility = "visible";
+    });
+  </script>
+</head>
+
+<header>
+  <nav
+    class="fixed top-0 left-0 w-full z-50 bg-opacity-80 backdrop-blur-md
+    {{#if isAdminPage}}
+      bg-black/90 border-b border-gray-800
+    {{else}}
+      {{#if isDarkMode}}bg-black/80 border-b border-gray-800{{else}}bg-white/80 border-b border-gray-200{{/if}}
+    {{/if}}
+    transition-colors duration-500"
+  >
+    <div class="max-w-6xl mx-auto flex items-center justify-between py-3 px-6">
+
+      <!-- Logo -->
+      <a href="/" class="text-2xl font-extrabold tracking-tight {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">
+        <span class="bg-black text-white px-2 py-1 rounded">MB</span>
+      </a>
+
+      <!-- Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        {{#unless isAdminPage}}
+          <a href="#tech" class="hover:text-neon transition {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">Tech Stack</a>
+          <a href="#experience" class="hover:text-neon transition {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">Experience</a>
+          <a href="#projects" class="hover:text-neon transition {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">Projects</a>
+
+          <!-- Dark Mode Toggle -->
+          <button id="darkModeToggle" class="ml-4 text-xl transition-all hover:scale-110 text-gray-700 dark:text-yellow-400">🌙</button>
+        {{/unless}}
+
+        <!-- Auth Buttons -->
+        {{#if isLoggedIn}}
+          <div class="flex items-center gap-4 ml-4">
+            <a href="/admin/dashboard" class="font-semibold {{#if isDarkMode}}text-white hover:text-neon{{else}}{{#if isAdminPage}}text-white hover:text-neon{{else}}text-gray-800 hover:text-neon{{/if}}{{/if}}">
+              {{#if user}}{{user.email}}{{else}}Admin{{/if}}
+            </a>
+            <a href="/admin/logout" class="px-3 py-1 rounded-md border border-gray-500 {{#if isDarkMode}}text-white{{else}}{{#if isAdminPage}}text-white{{else}}text-gray-800{{/if}}{{/if}} hover:bg-red-500 hover:text-white transition">
+              Logout
+            </a>
+          </div>
+        {{else}}
+          <a href="/admin/login" class="ml-4 px-4 py-2 rounded-md bg-neon text-black font-semibold hover:scale-105 transition">Login</a>
+        {{/if}}
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body class="{{#if isDarkMode}}bg-black{{else}}{{#if isAdminPage}}bg-black{{else}}bg-white{{/if}}{{/if}} text-white min-h-screen w-full transition-colors duration-500">
+
+  <main class="pt-20">
+    {{{body}}}
+  </main>
+
+  <div id="imageLightbox" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+    <img id="lightboxImage" src="" class="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg transition-transform duration-300 scale-100" />
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="/js/main.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>

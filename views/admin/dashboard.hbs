@@ -1,0 +1,70 @@
+{{!< layouts/base}}
+
+<div class="min-h-screen bg-black text-white py-16 px-8">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-white">Admin Dashboard</h1>
+
+    <p class="text-gray-400 mb-8">
+      Welcome back! Here you can manage your <b>Projects</b> and <b>Experiences</b>.
+    </p>
+
+    <!-- Navigation Buttons -->
+    <div class="flex gap-6 mb-10">
+      <a href="/admin/projects/new" class="px-6 py-2 bg-white text-black hover:text-neon font-semibold rounded-lg hover:scale-105 transition">
+        Add Project
+      </a>
+      <a href="/admin/experience/new" class="px-6 py-2 bg-white text-black hover:text-neon font-semibold rounded-lg hover:scale-105 transition">
+        Add Experience
+      </a>
+    </div>
+
+    <!-- Projects List -->
+<div>
+  <h2 class="text-2xl font-semibold mb-3">Projects</h2>
+  {{#if projects.length}}
+    <div class="space-y-4">
+      {{#each projects}}
+        <div class="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-lg text-white">{{title}}</h3>
+            <p class="text-gray-400 text-sm">{{description}}</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="/admin/projects/edit/{{id}}" class="px-3 py-1 bg-gray-700 rounded hover:bg-gray-600">Edit</a>
+            <form method="POST" action="/admin/projects/delete/{{id}}" onsubmit="return confirm('Delete this project?')">
+              <button type="submit" class="px-3 py-1 bg-red-600 rounded hover:bg-red-500">Delete</button>
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="text-gray-500">No projects yet.</p>
+  {{/if}}
+</div>
+
+<!-- Experiences List -->
+<div class="mt-10">
+  <h2 class="text-2xl font-semibold mb-3">Experiences</h2>
+  {{#if experiences.length}}
+    <div class="space-y-4">
+      {{#each experiences}}
+        <div class="bg-gray-900 p-4 rounded-xl flex justify-between items-center">
+          <div>
+            <h3 class="font-bold text-lg text-white">{{role}}</h3>
+            <p class="text-gray-400 text-sm">{{company}}</p>
+          </div>
+          <div class="flex gap-3">
+            <a href="/admin/experience/edit/{{id}}" class="px-3 py-1 bg-gray-700 rounded hover:bg-gray-600">Edit</a>
+            <form method="POST" action="/admin/experience/delete/{{id}}" onsubmit="return confirm('Delete this experience?')">
+              <button type="submit" class="px-3 py-1 bg-red-600 rounded hover:bg-red-500">Delete</button>
+            </form>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="text-gray-500">No experiences yet.</p>
+  {{/if}}
+</div>
+

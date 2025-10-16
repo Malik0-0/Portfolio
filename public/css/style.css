@@ -1,0 +1,109 @@
+/* --- base.hbs --- */
+* {
+  transition: background-color 0.4s, color 0.4s;
+}
+
+img {
+  cursor: zoom-in;
+}
+
+#imageLightbox {
+  cursor: zoom-out;
+}
+
+/* --- index.hbs --- */
+
+/* Pulse hover animation */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px 5px #00E5FF;
+  }
+
+  50% {
+    box-shadow: 0 0 20px 10px #00E5FF;
+  }
+}
+
+.hover-pulse:hover {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 5s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Section divider */
+.divider {
+  border-color: #1f2937;
+  margin: 3rem auto;
+  width: 70%;
+  display: flex;
+  align-items: center;
+}
+
+/* Section title style */
+.section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* Button Styles */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #6b7280;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Loaded transition */
+body.loaded {
+  opacity: 1;
+  transition: opacity 0.4s;
+}

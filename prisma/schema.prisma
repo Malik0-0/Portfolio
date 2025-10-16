@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  tech        String[]
+  images      String[]
+  repo_url    String?
+  demo_url    String?
+  createdAt   DateTime @default(now())
+}
+
+model Experience {
+  id          Int       @id @default(autoincrement())
+  role        String
+  company     String
+  start_date  DateTime
+  end_date    DateTime?
+  location    String
+  description String
+  tech        String[]
+  pictures    String[]
+  createdAt   DateTime  @default(now())
+}
+
+model User {
+  id            Int    @id @default(autoincrement())
+  email         String @unique
+  password_hash String
+}
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String
+  expiresAt DateTime
+
+  @@map("_Session")
+}

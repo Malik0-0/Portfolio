@@ -1,0 +1,292 @@
+{{!< layouts/base}}
+
+<!-- Hero Section -->
+<section class="flex flex-col md:flex-row items-center justify-center gap-12 py-20 px-8 max-w-6xl mx-auto">
+  <div class="relative w-80 h-80 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:scale-105 hover-pulse">
+    <img src="/img/profile.jpg" alt="Profile Photo" class="w-full h-full object-cover rounded-2xl hover-pulse" />
+  </div>
+
+  <div class="flex-1 space-y-5 text-center md:text-left">
+    <h1 class="text-5xl font-extrabold {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">
+      Hi, I'm Malik <span class="text-neon">(Zero)</span> Basori👋
+    </h1>
+    <h2 class="text-xl {{#if isDarkMode}}text-white{{else}}text-black{{/if}} font-medium">Indie Hacker & Full-Stack Developer</h2>
+    <p class="{{#if isDarkMode}}text-white{{else}}text-black{{/if}} leading-relaxed max-w-lg">
+      I build and ship digital products from scratch to production. Passionate
+      about creating end-to-end solutions and turning ideas into fully functional
+      applications. With expertise in both frontend and backend development, I
+      handle everything from concept to deployment and maintenance.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 items-center md:items-start {{#if isDarkMode}}text-white{{else}}text-black{{/if}} text-sm">
+      <div class="flex items-center gap-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.104 0 2-.896 2-2s-.896-2-2-2-2 .896-2 2 .896 2 2 2z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4.438 8-10A8 8 0 0 0 4 12c0 5.563 8 10 8 10z" />
+        </svg>
+        Depok, Indonesia
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+        Available for new projects
+      </div>
+    </div>
+
+    <div class="flex gap-4 mt-6 justify-center md:justify-start">
+      <a href="https://www.linkedin.com/in/malik-alrasyid-basori/" target="_blank" class="btn-primary">
+        <i class="devicon-linkedin-plain"></i> Let's Talk
+      </a>
+      <a href="../public/uploads/CV.pdf" target="_blank" class="btn-outline" download>
+        ⬇ Download CV
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack Section -->
+<section class="py-20" id="tech">
+  <div class="max-w-5xl mx-auto px-8 text-center">
+    <h2 class="section-title {{#if isDarkMode}}text-white{{else}}text-black{{/if}}">Tech Stack</h2>
+    <div class="relative overflow-hidden">
+      <div class="flex gap-10 animate-marquee">
+        <!-- Next.js -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-nextjs-plain colored text-5xl text-gray-300"></i>
+            <span class="text-sm text-gray-400 mt-2">Next.js</span>
+        </div>
+        
+        <!-- Tailwind -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-tailwindcss-plain text-5xl text-sky-500"></i>
+            <span class="text-sm text-gray-400 mt-2">Tailwind</span>
+        </div>
+        
+        <!-- Node.js -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-nodejs-plain text-5xl text-[#43853d]"></i>
+            <span class="text-sm text-gray-400 mt-2">Node.js</span>
+        </div>
+        
+        <!-- Express.js -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-express-original text-5xl text-gray-400"></i>
+            <span class="text-sm text-gray-400 mt-2">Express.js</span>
+        </div>
+        
+        <!-- TypeScript -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-typescript-plain text-5xl text-blue-500"></i>
+            <span class="text-sm text-gray-400 mt-2">TypeScript</span>
+        </div>
+        
+        <!-- JavaScript -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-javascript-plain text-5xl text-yellow-400"></i>
+            <span class="text-sm text-gray-400 mt-2">JavaScript</span>
+        </div>
+        
+        <!-- PostgreSQL -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-postgresql-plain text-5xl text-blue-600"></i>
+            <span class="text-sm text-gray-400 mt-2">PostgreSQL</span>
+        </div>
+        
+        <!-- MongoDB -->
+        <div class="flex flex-col items-center justify-center bg-white rounded-2xl p-4 mt-2 mb-2 shadow-md hover:scale-105 hover-pulse pulse-glow transition-all">
+            <i class="devicon-mongodb-plain text-5xl text-green-500"></i>
+            <span class="text-sm text-gray-400 mt-2">MongoDB</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- Work Experiences Section -->
+<section class="py-20 px-8 max-w-6xl mx-auto" id="experience">
+  <h2 class="section-title {{#if isDarkMode}}text-white{{else}}text-gray-900{{/if}}">
+    Work Experiences:
+  </h2>
+
+  {{#if experiences.length}}
+    <div class="space-y-10">
+      {{#each experiences}}
+        <div class="rounded-2xl p-8 border transition duration-300 hover:-translate-y-1 hover-pulse {{#if ../isDarkMode}}bg-black border-gray-800{{else}}bg-white border-gray-200 shadow-sm{{/if}}">
+          <div class="flex flex-col md:flex-row justify-between">
+            <div>
+              <h3 class="text-xl font-bold {{#if ../isDarkMode}}text-white{{else}}text-gray-900{{/if}}">
+                {{role}}
+              </h3>
+              <p class="{{#if ../isDarkMode}}text-green-400{{else}}text-green-600{{/if}} font-medium">
+                {{company}}
+              </p>
+            </div>
+            <div class="text-sm mt-2 md:mt-0 {{#if ../isDarkMode}}text-gray-400{{else}}text-gray-500{{/if}}">
+              {{formatDateRange start_date end_date}}
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="leading-relaxed {{#if ../isDarkMode}}text-white{{else}}text-black{{/if}} whitespace-pre-line">
+            {{description}}
+          </div>
+
+          <!-- Tech Stack -->
+          {{#if tech.length}}
+            <div class="flex flex-wrap gap-2 mt-4">
+              {{#each tech}}
+                <span
+                  class="px-3 py-1 text-sm rounded-full border {{#if ../../isDarkMode}}bg-gray-800 border-gray-700 text-gray-200{{else}}bg-gray-100 border-gray-300 text-gray-700{{/if}}"
+                >
+                  {{this}}
+                </span>
+              {{/each}}
+            </div>
+          {{/if}}
+
+          <!-- Pictures -->
+          {{#if pictures.length}}
+            <div class="flex flex-wrap gap-4 mt-6">
+              {{#each pictures}}
+                <img
+                  src="{{this}}"
+                  alt="{{../role}}"
+                  class="w-32 h-32 object-cover rounded-lg shadow-md border border-gray-700 hover:scale-105 transition"
+                />
+              {{/each}}
+            </div>
+          {{/if}}
+          
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="{{#if isDarkMode}}text-gray-400{{else}}text-gray-500{{/if}}">No experiences yet.</p>
+  {{/if}}
+</section>
+
+<hr class="divider" />
+
+<!-- Projects Section -->
+<section class="py-20 px-8 max-w-6xl mx-auto" id="projects">
+  <h2 class="section-title {{#if isDarkMode}}text-white{{else}}text-gray-900{{/if}}">My Projects:</h2>
+  
+  {{#if projects.length}}
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 gap-10">
+      {{#each projects}}
+        <div class="rounded-2xl border flex flex-col transition duration-300 hover:-translate-y-1 hover-pulse {{#if ../isDarkMode}}bg-black border-gray-800{{else}}bg-white border-gray-200 shadow-sm{{/if}}">
+            <!-- Carousel -->
+            {{#if images.length}}
+            <div class="relative w-full h-64 overflow-hidden group">
+                {{#each images}}
+                <img src="{{this}}" alt="{{../title}}"
+                    class="carousel-image absolute w-full h-full object-contain opacity-0 pointer-events-none transition-opacity duration-700">
+                {{/each}}
+                <!-- Arrows -->
+                <button
+                    class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded-full prev-btn opacity-0 group-hover:opacity-100 transition">‹</button>
+                <button
+                    class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 text-white px-2 py-1 rounded-full next-btn opacity-0 group-hover:opacity-100 transition">›</button>
+            </div>
+            {{else}}
+            <div class="w-full h-64 bg-gray-800 flex items-center justify-center text-gray-400">No Images</div>
+            {{/if}}
+
+            <!-- Info -->
+            <div class="p-6 flex flex-col flex-1 justify-between">
+            <div>
+              <h3 class="text-lg font-bold {{#if ../isDarkMode}}text-white{{else}}text-red-800{{/if}}">
+                {{title}}
+              </h3>
+              <p class="description-content text-sm mb-4 leading-relaxed {{#if ../isDarkMode}}text-white{{else}}text-black{{/if}} whitespace-pre-line">
+                {{description}}
+              </p>
+            </div>
+
+            <!-- Tech Stack -->
+            {{#if tech.length}}
+              <div class="flex flex-wrap gap-2 mb-4">
+                {{#each tech}}
+                  <span class="px-3 py-1 text-sm rounded-full border {{#if ../../isDarkMode}}bg-gray-800 border-gray-700 text-gray-200{{else}}bg-gray-100 border-gray-300 text-gray-700{{/if}}">
+                    {{this}}
+                  </span>
+                {{/each}}
+              </div>
+            {{/if}}
+
+            <!-- Links -->
+            <div class="flex items-center justify-between mt-auto text-sm font-medium">
+              {{#if repo_url}}
+                <a
+                  href="{{repo_url}}"
+                  target="_blank"
+                  class="{{#if ../isDarkMode}}text-gray-400 hover:text-neon{{else}}text-gray-500 hover:text-neon{{/if}} flex items-center gap-1 transition"
+                >
+                  Repository
+                </a>
+              {{else}}
+                <div class="{{#if ../isDarkMode}}text-gray-500{{else}}text-gray-400{{/if}} flex items-center gap-1">
+                  Private Repository
+                </div>
+              {{/if}}
+
+              {{#if demo_url}}
+                <a
+                  href="{{demo_url}}"
+                  target="_blank"
+                  class="flex items-center gap-1 transition {{#if ../isDarkMode}}text-blue-400 hover:text-neon{{else}}text-blue-500 hover:text-neon{{/if}}"
+                >
+                  Live Demo
+                </a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="{{#if isDarkMode}}text-gray-400{{else}}text-gray-500{{/if}}">No projects yet.</p>
+  {{/if}}
+</section>
+
+{{#unless isAdminPage}}
+  <section id="contact" class="py-20 px-8 text-center {{#if isDarkMode}}bg-black text-white{{else}}bg-white text-gray-900{{/if}}">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+        Let's build something together
+      </h2>
+
+      <p class="text-gray-400 mb-8 text-lg">
+        Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-base font-medium">
+        <a href="mailto:malikalrasyid.basori@gmail.com" class="flex items-center gap-2 hover:text-neon transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 12H8m8 0H8m8 0H8m0 0l-4 4m4-4l4-4m0 0H8m8 0H8" />
+          </svg>
+          malikalrasyid.basori@gmail.com
+        </a>
+    </div>
+  </section>
+
+  <footer class="py-8 px-8 text-center {{#if isDarkMode}}bg-black text-gray-400 border-t border-gray-800{{else}}bg-white text-gray-600 border-t border-gray-200{{/if}}">
+    <p class="text-sm">
+      © 2025 Designed and coded with <span class="text-red-500">❤</span> by
+      <span class="{{#if isDarkMode}}text-neon{{else}}text-black font-semibold{{/if}}">
+        Malik Basori
+      </span>
+    </p>
+
+    <div class="flex justify-center gap-4 mt-4">
+      <a href="https://github.com/Malik0-0" target="_blank" class="hover:text-neon transition">
+        <i class="devicon-github-original text-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/malik-alrasyid-basori/" target="_blank" class="hover:text-blue-400 transition">
+        <i class="devicon-linkedin-plain text-2xl"></i>
+      </a>
+    </div>
+  </footer>
+{{/unless}}
